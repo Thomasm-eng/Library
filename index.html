@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1 style="color:white">My Library</h1>
+        <button class="new-book" id="new-book">New Book</button>
+        <div class="active" id="popup" style="display: none;">
+            <form id="popup-form" onsubmit="return false">
+            <div class="form-header">
+                <h3>New Book</h3>
+                <button class="close-button" onclick="closePopup()">&times;</button>
+            </div>
+            <div class="form-body">
+                <input type="text" id="title" name="title" placeholder="Title">
+                <input type="text" id="author" name="author" placeholder="Author">
+                <input type="text" id="pages" name="pages" placeholder="Pages">
+                <div id="checkRead">
+                    <label>Read: </label>
+                    <input type="checkbox" id="read" style="cursor: pointer" name="read">
+                </div>
+                <button class="submit-button" id="submit" onclick="submitForm()">Add Book</button>
+            </div>
+            </form>
+        </div>
+        <div class="box">
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
